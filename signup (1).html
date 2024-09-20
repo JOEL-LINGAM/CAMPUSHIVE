@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusHive</title>
+    <title>CampusHive (sign up page)</title>
     <STYLE TYPE="TEXT/CSS">
         *{
             text-decoration: none  ;
@@ -11,14 +11,20 @@
 
         }
         .navbar{
-            background: rgb(79, 79, 242); font-family: calibri; padding-right: 15px;padding: 15px;
+            background: #a37946; font-family: calibri; padding-right: 15px;padding: 15px;
+            border-radius: 15px; opacity: 0.8;
             
         }
         .navdiv{
             display: flex; align-items: center; justify-content: space-between;       
          }
          .logo a{
-            font-size:35px ;  font-weight: 600 ;color: white;
+            font-size:35px ;  font-weight: 600 ;color: white; transition: all 0.2s ease-in;
+         }
+
+         .logo:hover{
+            transform: scale3d(1.1, 1.1,1) ;
+        
          }
          li{
             list-style: none;display: inline-block;
@@ -30,69 +36,130 @@
             background-color: black;margin-left: 10px; border-radius: 10px; padding: 10px;width: 90px;
          }
          button a{
-            color: white;font-weight: bold;font-size:15px ; 
+            color: white;font-weight: bold;font-size:15px ; transition: all 0.2s ease-in;
          }
+
+         button:hover{
+            transform: scale3d(1.1, 1.1,1) ;
+            background-color: rgb(210, 46, 46);
+         } 
          #bar2{
-            background-color: rgb(124, 124, 136); width: 800px;height: 800px;margin: auto;margin-top: 50px;
-            padding: 10px;text-align: center;padding-top: 60px;font-size: 35px;
+            background-color: khaki; width: 800px;height: 800px;margin: auto;margin-top: 50px;
+            padding: 10px;text-align: center;padding-top: 60px;font-size: 35px; margin-bottom: 50px;
+            border-radius: 30px; opacity: 0.8;
+         }
 
+         #bar2:hover{
+            /*transf orm: translateY(50px); 
+            transform: scale3d(1.1, 1.1,1); */
+            opacity: 1;
 
+         }
+         body{
+            background-image: url(sign\ up\ background.jpeg);
+            background-size: cover;
          }
          #text{
             height: 40px;width: 300px;border-radius: 4px;border: solid 1px #888;
-            padding: 4px;font-size: 14px;
+            padding: 4px;font-size: 15px;font-family: fantasy;
          }
          #button{
-            width: 300px;
+            width: 200px;
             height: 40px;
-            border-radius:4px ;
-            font-weight: bold;
-            border: none;
-            background-color: rgb(183, 166, 144);
+            border-radius:8px ;
+            font-weight: bolder;
+            border: solid 4px black;
+            background-color: rgb(138, 129, 116);
+            transition: all s ease-in;
+         }
+
+         #button:hover{
+            transform: scale3d(1.1, 1.1,1) ;
+            transform: translateY(-10px)
          }
        
+         .bar1{
+            background-color: rgba(230, 60, 60, 0.872);
+            width: 150px;
+            height: 150px;
+            top: 185px;
+            left: 55px;
+            position: fixed;
+            border-radius: 20px;
+            animation-name: bar1 ; animation-duration: 0.5s; 
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); 
+           animation-iteration-count: 1; animation-direction:alternate-reverse ;opacity: 0.9;
+        } 
+        @keyframes bar1 {
+            from{left: 0px}
+            to {left:170px }
+         }
+          
+         .hello{
+            position: fixed; aspect-ratio: 1;
+            height: auto;
+            width: 135px;
+            left: 60px;
+            border-radius: 45%;
+            top:190px;
+            animation-name: hello ; animation-duration: 0.5s; 
+            animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1); 
+           animation-iteration-count: 1; animation-direction: reverse;
+           border: 2px solid rgb(245, 45, 45);opacity: 1;
+        
+        }
+
+        @keyframes hello {
+            from{left: 0px}
+            to {left:200px }
+         }
     
 
         </style>
    
 </head>
 <body>
-    <header>
+    <form method="post" action="">
+        <header>
+            
+              <nav class="navbar">
+                  <div class="navdiv">
+                      <div class="logo"><a href="#">Campus'Hive &#9990;</a></div>
+                      <ul>
+                          <!-- <li><a href="#">HOME</a></li>
+                          <li><a href="#">POST</a></li>
+                          <li><a href="#">LIKES</a></li> -->
+                          <button><a href="http://localhost/CAMPUSHIVE/login.html">SIGN IN</a></button>
+                      </ul>
       
-        <nav class="navbar">
-            <div class="navdiv">
-                <div class="logo"><a href="#">CampusHive</a></div>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">POST</a></li>
-                    <li><a href="#">LIKES</a></li>
-                    <button><a href="http://127.0.0.1:3000/profile.html">SIGN IN</a></button>
-                </ul>
+      
+                  </div>
+              </nav>
+          </header>
 
-
-            </div>
-        </nav>
-    </header>
-    <div id="bar2">
-        SIGN UP TO CampusHive<br><br>
-        <input type="text" id="text" placeholder="FIRST NAME"><br><br>
-        <input type="text" id="text" placeholder="LAST NAME"><br><br>
-        GENDER<br>
-        <select id="text">
-            <option>
-                male
-
-            </option>
-            <option>female</option>
-
-        </select><br><br>
-        <input type="text" id="text" placeholder="EMAIL"><br><br>
-        
-        <input type="password" id="text" placeholder="PASSWORD"><br><br>
-        <input type="password" id="text" placeholder="RETYPE PASSWORD"><br><br>
-        <input type="submit" id="button" value="sign up">
-
-    </div>
-    
+          <div class="bar1" transition: all 100ms ease-in; hreff="#";></div>
+            <img src="logo.jpeg" class="hello"; hreff="#";>
+         </div>
+          <div id="bar2">
+              SIGN UP TO Campus'Hive &#9990;<br><br>
+              <input name ="FIRST_NAME" type="text" id="text" placeholder="FIRST NAME"><br><br>
+              <input name ="LAST_NAME" type="text" id="text" placeholder="LAST NAME"><br><br>
+              GENDER<br>
+              <select id="text" name ="GENDER">
+                  <option>
+                      male
+      
+                  </option>
+                  <option>female</option>
+      
+              </select><br><br>
+              <input name = "EMAIL" type="text" id="text" placeholder="EMAIL"><br><br>
+              
+              <input name ="PASSWORD" type="password" id="text" placeholder="PASSWORD"><br><br>
+              <input name ="PASSWORD2" type="password" id="text" placeholder="CONFIRM PASSWORD"><br><br>
+              <input type="submit" id="button" value="sign up">
+      
+          </div>
+    </form>
 </body>
 </html>
